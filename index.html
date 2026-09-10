@@ -1,31 +1,83 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Woodeo — Jean Toulemonde</title>
+  <title>Woodeo — Jean Toulemonde, IT Consultant</title>
+  <meta name="description" content="Jean Toulemonde — IT consultant in Brussels. Business systems, integration and digital solutions.">
+  <link rel="icon" href="logo-woodeo-mix-400.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    html, body { margin: 0; height: 100%; background: #000; color: #fff;
-      font-family: 'Source Sans Pro', 'Segoe UI', Arial, Helvetica, sans-serif; }
-    main { min-height: 100%; display: flex; flex-direction: column;
-      align-items: center; justify-content: center; text-align: center; padding: 40px 20px; box-sizing: border-box; }
-    img { width: 180px; height: auto; margin-bottom: 40px; }
-    h1 { font-size: 22px; font-weight: 600; margin: 0 0 20px; }
-    p { font-size: 16px; line-height: 1.8; margin: 0; }
-    a { color: #fff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    small { display: block; margin-top: 28px; opacity: .6; font-size: 14px; }
+    :root { --bg:#000; --ink:#F4F5F7; --mute:#8A8F9C; --line:#1E2126; --y:#FCE083; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:'IBM Plex Mono',Consolas,'Courier New',monospace; font-size:15px; line-height:1.75; -webkit-font-smoothing:antialiased; }
+    a { color:inherit; }
+    .wrap { max-width:760px; margin:0 auto; padding:0 28px; }
+
+    .hero { min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding:60px 0; }
+    .hero object, .hero img { width:200px; height:200px; display:block; margin-bottom:44px; }
+    h1 { font-size:clamp(24px,4.5vw,36px); font-weight:600; line-height:1.2; margin:0 0 18px; letter-spacing:-.4px; }
+    h1 em { font-style:normal; color:var(--y); }
+    .hero p { max-width:54ch; color:var(--mute); margin:0; }
+
+    section { padding:56px 0; border-top:1px solid var(--line); }
+    h2 { font-size:13px; font-weight:500; color:var(--y); margin:0 0 24px; }
+    h2::before { content:"■ "; font-size:9px; vertical-align:2px; }
+    ul { list-style:none; padding:0; margin:0; }
+    li { padding:14px 0; border-bottom:1px solid var(--line); display:grid; grid-template-columns:220px 1fr; gap:8px 24px; }
+    li:last-child { border-bottom:0; }
+    li strong { font-weight:600; }
+    li span { color:var(--mute); font-size:14px; }
+
+    .contact a { text-decoration:none; }
+    .contact a:hover, .contact a:focus-visible { color:var(--y); outline:none; }
+    .contact .big { font-size:clamp(18px,3vw,24px); font-weight:600; display:block; margin-bottom:6px; }
+    .contact p { margin:14px 0 0; color:var(--mute); font-size:14px; }
+
+    footer { padding:28px 0 44px; border-top:1px solid var(--line); color:var(--mute); font-size:12px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+
+    @media (max-width:640px) {
+      .hero { min-height:0; padding:48px 0 40px; }
+      .hero object, .hero img { width:150px; height:150px; margin-bottom:32px; }
+      li { grid-template-columns:1fr; gap:2px; }
+    }
   </style>
 </head>
 <body>
-  <main>
-    <img src="logo-woodeo-160.png" alt="Woodeo">
-    <h1>Jean Toulemonde</h1>
-    <p>
-      <a href="mailto:Jean@woodeo.net">Jean@woodeo.net</a><br>
-      <a href="tel:+32485261240">+32 485 26 12 40</a>
-    </p>
-    <small>TVA BE1026.497.847</small>
-  </main>
+<div class="wrap">
+
+  <header class="hero">
+    <object data="logo-woodeo-anim.svg" type="image/svg+xml" aria-label="Woodeo">
+      <img src="logo-woodeo-mix-400.png" alt="Woodeo">
+    </object>
+    <h1>Systems that talk to each other. <em>Projects that land.</em></h1>
+    <p>Jean Toulemonde — IT consultant in Brussels. I help organisations choose, implement and run the business systems they depend on, and build the digital tools that connect them.</p>
+  </header>
+
+  <section>
+    <h2>Specialisations</h2>
+    <ul>
+      <li><strong>Business systems</strong><span>ERP, CRM and HR platforms — from requirements and vendor selection to implementation, day-to-day ownership and change management.</span></li>
+      <li><strong>Integration &amp; data</strong><span>Making systems exchange data reliably: integration architecture, APIs, data migration and data quality.</span></li>
+      <li><strong>Business analysis</strong><span>Turning what the business needs into what IT can build — workshops, process modelling, specifications, testing.</span></li>
+      <li><strong>Automation &amp; low-code</strong><span>Workflows, forms, internal apps and dashboards that replace manual processes and spreadsheets.</span></li>
+      <li><strong>Web &amp; e-commerce</strong><span>Websites, online shops and client portals for small businesses, from design to hosting.</span></li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <a class="big" href="mailto:Jean@woodeo.net">Jean@woodeo.net</a>
+    <a class="big" href="tel:+32485261240">+32 485 26 12 40</a>
+    <p>Brussels, Belgium. Available for missions on site and remote, in French and English.</p>
+  </section>
+
+  <footer>
+    <span>Woodeo — Jean Toulemonde</span>
+    <span>VAT BE1026.497.847</span>
+  </footer>
+
+</div>
 </body>
 </html>
